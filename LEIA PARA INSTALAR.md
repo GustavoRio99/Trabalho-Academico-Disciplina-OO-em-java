@@ -1,6 +1,6 @@
 # SGC
 Sistema Gerenciador Comissao
-Sistema desenvolvido por Gustavo Rio e Alunos do projeto de extensao do curso Programacao orientada a obj em java
+Sistema desenvolvido por Gustavo Rio e Alunos do projeto de extensao do curso Programacao orientada a obj em java junto ao Professor DR Pablo Rangel : https://github.com/pablorangel82
 
 Roteiro de Instalação e Configuração do Projeto SGV
 1. Instalar o JDK da Oracle (Java 17)
