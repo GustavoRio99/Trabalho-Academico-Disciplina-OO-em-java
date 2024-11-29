@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head> 
+        <meta charset="utf-8"/>
+        <title>Sistema Comissão de Vendas</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #FFA726, #FB8C00); /* Fundo laranja com gradiente */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                max-width: 400px;
+                padding: 30px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+            }
+            h1, h2, label {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+            }
+            h1 {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+            .alert-dark {
+                background-color: #333;
+                color: #fff;
+            }
+            .btn-primary {
+                font-weight: bold;
+                background-color: #FB8C00;
+                border-color: #FB8C00;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra no botão */
+                width: 100%;
+            }
+            .btn-primary:hover {
+                background-color: #FF7043;
+                border-color: #FF7043;
+            }
+            .btn-primary:focus {
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Sombra mais intensa ao focar */
+            }
+            .form-control {
+                margin-bottom: 15px;
+            }
+            .alert-danger {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form th:action="@{/efetuarLogin}" method="post">
+            <div class="container">
+                <h1 class="alert alert-dark">Sistema Comissão de Vendas</h1>
+                <div class="form-group">
+                    <label for="login">Login:</label>
+                    <input type="text" id="login" name="login" placeholder="Login do Usuário" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <div th:if="${param.error}" class="alert alert-danger">
+                        Nome de usuário ou senha inválidos.
+                    </div>
+                    <hr>
+                    <input type="submit" value="Login" class="btn btn-primary">    
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

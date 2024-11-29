@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head> 
+        <meta charset="utf-8"/>
+        <title>Sistema Comissao de Vendas</title>
+        <style>/* Estilo do dropdown */
+.dropdown-menu {
+    background-color: #333; /* Fundo escuro para melhor contraste */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo das opções do menu */
+.dropdown-item {
+    color: #fff; /* Texto branco */
+    padding: 10px 15px; /* Espaciamento confortável */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito de hover nas opções do menu */
+.dropdown-item:hover {
+    background-color: #FB8C00; /* Cor de fundo ao passar o mouse */
+    color: #333; /* Cor do texto muda para um tom escuro */
+}
+
+/* Efeito de foco nas opções do menu */
+.dropdown-item:focus {
+    background-color: #FF7043; /* Cor de fundo ao focar na opção */
+    color: #fff; /* Mantém o texto branco */
+}
+</style>
+    </head>
+    <!-- Navigation -->
+    <div th:fragment="header">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">CST AUTOMACAO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="gerenciarNavbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Gerenciar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/pessoas-juridicas">Supervisor</a>
+                            <a class="dropdown-item" href="/pessoas-fisicas">Estagiario</a>
+                            <a class="dropdown-item" href="/produtos">Produtos&Servicos</a>
+                            <a class="dropdown-item" href="/vendas">Vendas Servicos</a>
+                         </div>
+                    </li>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="administrarNavbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Configuracoes
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="/usuarios">Usuarios</a>
+                             </div>
+                        </li>
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contaNavbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sair
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/logout">Logout</a>
+                         </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
