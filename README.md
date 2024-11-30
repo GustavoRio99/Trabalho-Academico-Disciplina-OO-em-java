@@ -1,6 +1,6 @@
 Apresentação do Projeto
 
-Olá, meu nome é Gustavo, sou acadêmico do curso de Ciência da Computação e, atualmente, encontro-me no 6º período do curso de Bacharelado (data: 27/11/2024).
+Olá, meu nome é Gustavo, sou acadêmico do curso de Ciência da Computação e, atualmente, encontro-me no 6º período do  Bacharelado (data: 27/11/2024).
 
 É com grande satisfação que venho apresentar o meu projeto de extensão desenvolvido durante o curso de Programação Orientada a Objetos em Java. Este projeto incorpora diversos recursos interessantes e práticos, evidenciando os conceitos e técnicas aprendidos ao longo do curso.
 
